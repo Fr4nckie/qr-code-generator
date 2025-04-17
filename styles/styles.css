@@ -1,0 +1,94 @@
+@import './reset.css';
+@import './variables.css';
+
+/* .outfit-<uniquifier > {
+    font-family: 'Outfit', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+} */
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/qa-bg-small.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-background-light);
+}
+
+@media (min-width: 1024px) {
+    body {
+        background-image: url('../assets/qa-bg.jpg');
+    }
+}
+
+.container {
+    max-width: 768px;
+    height: 100%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.generator {
+    width: inherit;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    margin-bottom: 32px;
+}
+
+form {
+    width: 100%;
+
+    input {
+        padding-inline: 0.75rem;
+    }
+
+    input::placeholder {
+        color: var(--color-background-light);
+    }
+
+    button {
+        cursor: pointer;
+        width: 100%;
+        background-color: var(--color-primary);
+        text-align: center;
+        padding-block: 12px;
+        border-radius: 14px;
+    }
+
+    & > div {
+        background-color: var(--color-text-dark);
+        width: 100%;
+        border: 2px solid var(--color-primary);
+        display: grid;
+        grid-template-columns: calc(100% - 80px) 80px;
+        padding: 0.25rem;
+        border-radius: 14px;
+    }
+}
+
+@media (min-width: 640px) {
+    form {
+        input {
+            padding-inline: 1.25rem;
+        }
+
+        button {
+            padding-block: 16px;
+        }
+
+        & > div {
+            grid-template-columns: calc(100% - 120px) 120px;
+        }
+    }
+}

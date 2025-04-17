@@ -1,0 +1,7 @@
+:root {
+    --color-background-light: #f2f5f9; /* gris très clair, idéal en fond */
+    --color-primary: #263fa9; /* bleu vif, parfait pour éléments principaux */
+    --color-text-dark: #030616; /* quasi noir, idéal pour le texte principal */
+    --color-neutral: #fafaf9; /* blanc cassé, bon pour fonds ou zones secondaires */
+    --color-overlay: #f8fafc1a; /* blanc transparent (10%), parfait pour overlay ou hover */
+}
