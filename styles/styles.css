@@ -46,6 +46,12 @@ body {
     margin-bottom: 32px;
 }
 
+.btn {
+    cursor: pointer;
+    background-color: var(--color-primary);
+    text-align: center;
+}
+
 form {
     width: 100%;
 
@@ -58,10 +64,7 @@ form {
     }
 
     button {
-        cursor: pointer;
         width: 100%;
-        background-color: var(--color-primary);
-        text-align: center;
         padding-block: 12px;
         border-radius: 14px;
     }
@@ -91,4 +94,63 @@ form {
             grid-template-columns: calc(100% - 120px) 120px;
         }
     }
+}
+
+.hidden {
+    display: none;
+    overflow: hidden;
+}
+
+#qrcode {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.qrcode_content {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-neutral);
+    padding: 22px;
+    border-radius: 22px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 222px;
+        height: 222px;
+        background-color: var(--color-overlay);
+        border-radius: 50%;
+    }
+}
+
+.qrcode_actions {
+    margin-top: 64px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        min-width: 140px;
+        padding-block: 16px;
+        border-radius: 16px;
+        text-transform: capitalize;
+    }
+}
+
+.small-logo {
+    position: absolute;
+    top: 36px;
 }

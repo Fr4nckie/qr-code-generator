@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>QR Code Generator</title>
+        <link rel="stylesheet" href="./styles/styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Generator</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <div class="container">
-        <div class="generator">
-            <div class="logo">
-                <img src="./assets/Logo.svg" alt="">
-            </div>
-            <form>
-                <div>
-                    <input class="input" type="text" placeholder="Enter an url">
-                    <button class="button">QR Code</button>
+    <body>
+        <div class="container">
+            <div class="generator">
+                <div class="logo">
+                    <img src="./assets/Logo.svg" alt="" />
                 </div>
-            </form>
+                <form>
+                    <div>
+                        <input
+                            class="input"
+                            type="text"
+                            placeholder="Enter an url"
+                        />
+                        <button class="btn btn-submit">QR Code</button>
+                    </div>
+                </form>
+            </div>
+            <div id="qrcode"></div>
         </div>
-    </div>
-</body>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>
