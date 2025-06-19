@@ -5,7 +5,7 @@ body {
     font-family: 'Outfit', sans-serif;
     font-size: 1rem;
     width: 100%;
-    max-height: 100vh;
+    min-height: 100vh;
     background-image: url('../assets/qa-bg-small.jpg');
     background-size: cover;
     background-position: center;
@@ -147,4 +147,17 @@ form {
 .small-logo {
     position: absolute;
     top: 36px;
+}
+
+.btn-back {
+    position: absolute;
+    top: 36px;
+    left: 0;
+    width: 24px;
+    cursor: pointer;
+    border-radius: 16px;
+
+    &:hover {
+        transform: scale(1.2);
+    }
 }

@@ -21,7 +21,12 @@ const dowloadImage = () => {
 }
 
 const resultPage = (url) => {
-    qrcode.innerHTML += `<div class="small-logo">
+    qrcode.innerHTML += `
+    <button class="btn-back"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+</svg>
+</button>
+    <div class="small-logo">
                             <img src="./assets/Logo-small.svg" />
                         </div>
                         <div class="qrcode_content">
@@ -47,6 +52,13 @@ const resultPage = (url) => {
     document
         .querySelector('button.download')
         .addEventListener('click', dowloadImage)
+
+    document.querySelector(".btn-back").addEventListener("click", () => {
+        if (generator.classList.contains("hidden")) {
+            generator.classList.remove("hidden")
+            qrcode.innerHTML = ""
+        }
+    })
 }
 
 submit.addEventListener('click', (event) => {
@@ -56,5 +68,6 @@ submit.addEventListener('click', (event) => {
     } else {
         generator.classList.add('hidden')
         resultPage(input.value)
+        input.value = ""
     }
 })
