@@ -32,7 +32,7 @@ const resultPage = (url) => {
                                 <span>downlad</span>
                                 <img src="./assets/Load_circle_duotone.svg" alt="" />
                             </button>
-                            <button class="btn share">
+                            <button class="btn share" disabled>
                                 <span>share</span>
                                 <img src="./assets/link_alt.svg" alt="" />
                             </button>
